@@ -12,9 +12,25 @@ jobs:
         
     steps:
       - uses: actions/checkout@v3
+
       - name: Use Node.js
         uses: actions/setup-node@v3
-      - run: npm i
-      - run: npm run build --if-present
-      - run: npm run unittest
-      - run: npm run integrationtest
+      
+      - name: Install Package Deps
+        run: npm i
+
+      - name: Build
+        run: npm run build --if-present
+      
+      - name: Run Unit Tests
+        run: |
+           npm run unittest
+           npm run coverage
+
+      - name: Run Integration Tests
+        run: npm run integrationtest
+
+      - name: Publish to coveralls.io
+        uses: coverallsapp/github-action@v2
+        with:
+          github-token: ${{ github.token }}
