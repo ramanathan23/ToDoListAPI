@@ -14,16 +14,16 @@ describe( "ToDoService Unit Tests", () => {
        expect(list.length).equals(2);
 	});
 
-    // it("ToDoService should complete todo", () => {
-    //     store.expects("getByKey").returns({});
-    //     todoService.CompleteToDo(0);
-    //     store.verify();
-    // });
+    it("ToDoService should complete todo", () => {
+        store.expects("getByKey").returns({});
+        todoService.CompleteToDo(0);
+        store.verify();
+    });
 
-    // it("ToDoService should create todo", () => {
-    //     store.expects("lastId").returns(100);
-    //     store.expects("push");
-    //     todoService.CreateToDo({});
-    //     store.verify();
-    // });
+    it("ToDoService should create todo", () => {
+        store.expects("lastId").returns(100);
+        store.expects("push");
+        todoService.CreateToDo({});
+        store.verify();
+    });
 });
