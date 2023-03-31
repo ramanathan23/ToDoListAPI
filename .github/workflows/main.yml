@@ -27,5 +27,14 @@ jobs:
            npm run unittest
            npm run coverage
            
+      - name: Coverage Validation
+        id: coverage
+        uses: ramanathan23/NYCCoverageValidator@DraftVersion
+        with:
+            threshold-pct: 80
+            
+      - name: Coverage Status
+        run: echo "The coverage status ${{ steps.coverage.outputs.status }}" 
+           
       - name: Run Integration Tests
         run: npm run integrationtest
