@@ -9,9 +9,9 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "unittest": "nyc --reporter=lcov mocha 'Tests/**/*UnitTest.js'",
+    "unittest": "nyc --reporter=text-summary mocha 'Tests/**/*UnitTest.js'",
     "integrationtest": "mocha 'Tests/**/*IntegrationTest.js'",
-    "coverage": "nyc report --reporter=lcov"
+    "coverage": "nyc report --reporter=json-summary"
   },
   "author": "Ram",
   "license": "ISC",

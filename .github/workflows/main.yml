@@ -26,11 +26,6 @@ jobs:
         run: |
            npm run unittest
            npm run coverage
-
-      - name: Publish to coveralls.io
-        uses: coverallsapp/github-action@v2
-        with:
-          github-token: ${{ github.token }}
-          
+           
       - name: Run Integration Tests
         run: npm run integrationtest
