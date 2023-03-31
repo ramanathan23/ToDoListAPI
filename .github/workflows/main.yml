@@ -28,7 +28,7 @@ jobs:
            npm run coverage
            
       - name: Coverage Validation
-        uses: ramanathan23/NYCCoverageValidator@1.4-Darft
+        uses: ramanathan23/NYCCoverageValidator@1.5-Darft
         id: coverage
         with:
           threshold-pct: 80
