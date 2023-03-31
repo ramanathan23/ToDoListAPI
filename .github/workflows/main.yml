@@ -34,7 +34,9 @@ jobs:
           threshold-pct: 80
             
       - name: Coverage Status
-        run: echo "The coverage status ${{ steps.coverage.outputs.status }}" 
+        if: ${{ steps.coverage.outputs.status == false }}
+        run: exit 1
+        
            
       - name: Run Integration Tests
         run: npm run integrationtest
