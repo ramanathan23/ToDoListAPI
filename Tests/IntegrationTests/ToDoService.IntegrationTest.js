@@ -10,7 +10,7 @@ describe( "ToDoService Unit Tests", () => {
 
     it("ToDoService should list all todos", () => {
        let list = todoService.ListToDo();
-       expect(list.length).equals(2);
+       expect(list.length).equals(3);
 	});
 
     it("ToDoService should complete todo", () => {
