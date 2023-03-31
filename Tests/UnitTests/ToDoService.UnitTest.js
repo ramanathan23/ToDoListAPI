@@ -11,12 +11,12 @@ describe( "ToDoService Unit Tests", () => {
       store.expects("getAll").returns([{},{}])
        let list = todoService.ListToDo();
        store.verify();
-       expect(list.length).equals(2);
+       expect(list.length).equals(3);
 	});
 
     it("ToDoService should complete todo", () => {
         store.expects("getByKey").returns({});
-        todoService.CompleteToDo(1);
+        todoService.CompleteToDo(0);
         store.verify();
     });
 
