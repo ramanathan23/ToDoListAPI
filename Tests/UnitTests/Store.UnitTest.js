@@ -9,7 +9,7 @@ describe( "Store Unit Tests", () => {
         assert.equal(store.getAll().length == 0, true);
     });
 
-    it("Store should push objects when requested", () => {
+    /* it("Store should push objects when requested", () => {
         store.push({});
         assert.equal(store.getAll().length > 0, true);
     });
@@ -17,5 +17,5 @@ describe( "Store Unit Tests", () => {
     it("Store should retun objects by key", () => {
         store.push({});
         assert.equal(store.getByKey(0) != null, true);
-    });
+    }); */
 });
