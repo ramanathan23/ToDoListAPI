@@ -28,10 +28,10 @@ jobs:
            npm run coverage
            
       - name: Coverage Validation
-        id: coverage
         uses: ramanathan23/NYCCoverageValidator@1.2-Darft
+        id: coverage
         with:
-            threshold-pct: 80
+          threshold-pct: 80
             
       - name: Coverage Status
         run: echo "The coverage status ${{ steps.coverage.outputs.status }}" 
