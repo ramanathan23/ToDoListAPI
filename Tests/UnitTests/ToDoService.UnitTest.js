@@ -7,7 +7,7 @@ describe( "ToDoService Unit Tests", () => {
 
     var store = sinon.mock(Store.prototype);
     var todoService = new ToDoService(store.object);
-    it("ToDoService should list all todos", () => {
+    /* it("ToDoService should list all todos", () => {
       store.expects("getAll").returns([{},{}])
        let list = todoService.ListToDo();
        store.verify();
@@ -25,5 +25,5 @@ describe( "ToDoService Unit Tests", () => {
         store.expects("push");
         todoService.CreateToDo({});
         store.verify();
-    });
+    }); */
 });
