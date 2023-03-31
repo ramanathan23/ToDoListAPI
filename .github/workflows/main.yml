@@ -29,7 +29,7 @@ jobs:
            
       - name: Coverage Validation
         id: coverage
-        uses: ramanathan23/NYCCoverageValidator@DraftVersion
+        uses: ramanathan23/NYCCoverageValidator@1.1-Darft
         with:
             threshold-pct: 80
             
