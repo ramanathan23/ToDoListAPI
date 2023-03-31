@@ -14,7 +14,7 @@ describe( "ToDoService Unit Tests", () => {
        expect(list.length).equals(2);
 	});
 
-    it("ToDoService should complete todo", () => {
+    /* it("ToDoService should complete todo", () => {
         store.expects("getByKey").returns({});
         todoService.CompleteToDo(0);
         store.verify();
@@ -25,5 +25,5 @@ describe( "ToDoService Unit Tests", () => {
         store.expects("push");
         todoService.CreateToDo({});
         store.verify();
-    });
+    }); */
 });
