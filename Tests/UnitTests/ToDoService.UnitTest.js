@@ -16,7 +16,7 @@ describe( "ToDoService Unit Tests", () => {
 
     it("ToDoService should complete todo", () => {
         store.expects("getByKey").returns({});
-        todoService.CompleteToDo(0);
+        todoService.CompleteToDo(1);
         store.verify();
     });
 
