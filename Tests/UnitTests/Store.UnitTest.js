@@ -4,7 +4,7 @@ const Store = require('../../Persistence/InMemory');
 var store = new Store();
 
 describe( "Store Unit Tests", () => {
-	
+	   
    /* it("Store should return zero objects when initialized", () => {
         assert.equal(store.getAll().length == 0, true);
     });
