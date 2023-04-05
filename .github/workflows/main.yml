@@ -27,5 +27,16 @@ jobs:
            npm run unittest
            npm run coverage
            
+      - name: Coverage Validation
+        uses: ramanathan23/NYCCoverageValidator@1.5-Darft
+        id: coverage
+        with:
+          threshold-pct: 80
+            
+      - name: Coverage Status
+        if: ${{ steps.coverage.outputs.status == false }}
+        run: exit 1
+        
+           
       - name: Run Integration Tests
         run: npm run integrationtest
