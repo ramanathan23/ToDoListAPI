@@ -1,9 +1,10 @@
 name: ToDoListAPI Performance Test
+run-name: ToDoListAPI Performance Test
 
 on: workflow_dispatch
 
 jobs:
-  build:
+  Perftest:
     runs-on: ubuntu-latest
         
     steps:
@@ -14,6 +15,7 @@ jobs:
         with:
           test-plan-path: ./Tests/PerformanceTests/ToDoListAPI-PerformanceTest.jmx
           args: ""
+
       - name: Upload Results
         uses: actions/upload-artifact@v2
         with:
