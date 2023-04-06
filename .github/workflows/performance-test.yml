@@ -8,8 +8,6 @@ jobs:
     runs-on: ubuntu-latest
         
     steps:
-      - uses: actions/checkout@v3
-
       - name: JMeter Test
         uses: QAInsights/PerfAction@v3.1
         with:
@@ -17,7 +15,7 @@ jobs:
           args: ""
 
       - name: Upload Results
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3.1.21
         with:
           name: jmeter-results
           path: result.jtl
